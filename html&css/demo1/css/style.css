@@ -1,0 +1,69 @@
+body {
+	margin:0;
+}
+.fn-clear:after {
+    content: " ";
+    clear: both;
+    display: block;
+    font-size: 0;
+    visibility: hidden;
+    height: 0;
+}
+.fn-clear {
+    zoom: 1;
+}
+.container{
+	padding: 10px;
+
+}
+
+.logo{
+	font-size: 10px;
+	width: 100px;
+	height: 100px;
+	background-color: #f60;
+	float: left;
+}
+
+.userInf{
+	position: absolute;
+	right:10px;
+	bottom:10px;
+}
+.main{
+	margin-bottom:10px;
+}
+.right{
+	width: 200px;
+	float: right;
+	background-color: #ccc;
+}
+.content{
+	margin-right: 200px;
+	background-color: #ccc;
+}
+.footer{
+	background-color: #999;
+}
+
+
+.div1 {
+	width:200px;
+	height:200px;
+	border:4px solid purple;
+	position:absolute;
+	left: 50%;
+	top:50%;
+	margin-left:-100px;/* 150为宽度尺寸的一半 */
+	margin-top:-100px;/*150为高度尺寸的一半*/
+}
+
+#myTriangle{
+	width: 0px;
+	height: 0px;
+	border-top: 0px ;
+	border-left: 50px solid transparent;
+	border-bottom: 100px solid blue;
+	border-right: 50px solid transparent;
+
+}

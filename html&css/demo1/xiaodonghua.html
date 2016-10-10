@@ -1,0 +1,52 @@
+<!DOCTyPE html>
+<html>
+  <head> 
+  <meta charset="utf-8"/>  
+  <title>
+  我的第一个js动画demo
+  </title>
+  <style type="text/css">
+  #pic{  
+    position: relative;  
+    width: 200px;
+    height: 200px;
+    left:600px;
+  }
+  </style>
+  <script type="text/javascript">
+  window.onload=function(){
+    var oPic=document.getElementById('pic');
+    oPic.onmouseover=function(){
+      startMove(0);
+    }  
+     oPic.onmouseout=function(){
+      startMove(600);
+    }    
+  }
+  var timer=null;
+  function startMove(iTarget){
+    clearInterval(timer);
+    var oPic=document.getElementById('pic');
+    timer=setInterval(function(){
+      var speed=0;
+      if(oPic.offsetLeft>iTarget){
+        speed=-10;
+      }
+      else{
+        speed=10;
+      }
+      if(oPic.offsetLeft==iTarget){
+        clearInterval(timer);
+      }else{
+        oPic.style.left=oPic.offsetLeft+speed+'px';
+      }
+    },1000)
+  }
+  </script>
+  </head>
+  <body>
+    <img src="imgs/woniu.jpg" id="pic">
+    
+  </body>
+ 
+</html>
